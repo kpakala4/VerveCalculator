@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/app_name"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:titleCentered="true" />
+
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/resultView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textStyle="bold"
+            android:minHeight="72dp"
+            android:padding="16dp"
+            android:background="@drawable/result_background" />
+
+        <GridLayout
+            android:id="@+id/buttonGrid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:columnCount="4"
+            android:rowCount="5"
+            android:useDefaultMargins="true">
+
+            <Button
+                android:id="@+id/buttonClear"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/buttonDivide"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="/" />
+
+            <Button
+                android:id="@+id/buttonMultiply"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="×" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="⌫" />
+
+            <Button android:id="@+id/button7" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="7" />
+            <Button android:id="@+id/button8" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="8" />
+            <Button android:id="@+id/button9" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="9" />
+            <Button android:id="@+id/buttonMinus" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="-" />
+
+            <Button android:id="@+id/button4" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="4" />
+            <Button android:id="@+id/button5" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="5" />
+            <Button android:id="@+id/button6" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="6" />
+            <Button android:id="@+id/buttonPlus" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="+" />
+
+            <Button android:id="@+id/button1" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="1" />
+            <Button android:id="@+id/button2" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="2" />
+            <Button android:id="@+id/button3" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="3" />
+            <Button android:id="@+id/buttonEquals" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="2" android:text="=" />
+
+            <Button android:id="@+id/button0" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnSpan="2" android:layout_columnWeight="2" android:layout_rowWeight="1" android:text="0" />
+            <Button android:id="@+id/buttonDecimal" style="@style/Widget.MaterialComponents.Button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_rowWeight="1" android:text="." />
+        </GridLayout>
+
+        <net.pubnative.lite.sdk.views.HyBidBannerAdView
+            android:id="@+id/bannerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:placement_token="dde3c298b47648459f8ada4a982fa92d" />
+
+        <TextView
+            android:id="@+id/bannerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/banner_status_loading" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
