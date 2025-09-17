@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Verve Calculator</string>
+    <string name="banner_status_loading">Loading banner…</string>
+    <string name="banner_status_loaded">Banner loaded</string>
+    <string name="banner_status_failed">Banner failed</string>
+    <string name="interstitial_loading">Preparing interstitial…</string>
+    <string name="interstitial_ready">Interstitial ready</string>
+    <string name="interstitial_failed">Interstitial failed</string>
+    <string name="calculate">Calculate</string>
+</resources>
